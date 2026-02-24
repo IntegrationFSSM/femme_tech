@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FemTech Hackathon 2026 | Women's Day</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'fem-bg': '#F4EAD3',
+                        'fem-ink': '#2A2A28',
+                        'fem-green': '#3F5647',
+                        'fem-rose': '#D1565C',
+                        'fem-rose-soft': '#E2C4C3',
+                        'fem-surface': '#FCF9F2',
+                        'fem-border': '#DBCFBA',
+                        'fem-accent': '#D37340',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        script: ['Great Vibes', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-fem-ink bg-fem-bg relative selection:bg-fem-green selection:text-white">
+    
+    <!-- Animated Subtle Background -->
+    <div class="fixed inset-0 -z-20 overflow-hidden pointer-events-none">
+        <div class="absolute inset-0 floral-pattern opacity-10"></div>
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-fem-rose-soft blur-[150px] rounded-full mix-blend-multiply opacity-50"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-fem-border blur-[150px] rounded-full mix-blend-multiply opacity-50"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-500 py-6 border-b border-transparent" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
+            <div class="flex items-center group cursor-pointer gap-4">
+                <div class="w-12 h-12 flex items-center justify-center bg-fem-ink rounded-full transition-all duration-700 shadow-md group-hover:bg-fem-green group-hover:rotate-180">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-fem-bg">
+                        <path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-bold tracking-widest text-fem-ink uppercase font-serif">FemTech</span>
+                    <span class="text-[9px] uppercase tracking-[0.4em] text-fem-green font-bold">Hackathon 2026</span>
+                </div>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-10">
+                <a href="#about" class="nav-link">Concept</a>
+                <a href="#target" class="nav-link">Pour Qui ?</a>
+                <a href="#themes" class="nav-link">Thématiques</a>
+                <a href="#program" class="nav-link">Programme</a>
+                <a href="#register" class="px-8 py-3 bg-fem-green text-white hover:bg-fem-ink transition-all duration-300 rounded-full text-sm uppercase tracking-widest font-bold shadow-lg">
+                    Candidature
+                </a>
+            </div>
+
+            <button class="lg:hidden text-fem-ink text-3xl font-serif" id="nav-toggle">
+                &#9776;
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="min-h-screen relative flex flex-col items-center justify-center pt-32 pb-20 text-center px-4">
+        <div class="w-full flex justify-between px-6 lg:px-12 absolute top-28 items-center opacity-60 font-serif text-sm tracking-widest uppercase text-fem-ink font-bold">
+            <div class="text-left leading-relaxed text-[10px] md:text-sm">
+                Université Cadi Ayyad<br>
+                <span class="text-fem-accent">Club UCA'INNOV</span>
+            </div>
+            <div class="text-right leading-relaxed text-[10px] md:text-sm">
+                Cité de l'innovation<br>
+                <span class="text-fem-accent">Marrakech</span>
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto z-10 w-full mt-24 md:mt-16" data-aos="fade-up" data-aos-duration="1200">
+            <div class="mb-4 relative flex flex-col items-center justify-center h-48 md:h-72 lg:h-96">
+                <!-- The main bold text (Behind) -->
+                <h1 class="absolute top-10 md:top-20 w-full text-center text-[5.5rem] md:text-[8.5rem] lg:text-[11.5rem] font-serif font-bold text-fem-ink/90 leading-[0.8] tracking-tight z-0">
+                    FEMTECH <br>
+                    <span class="tracking-tighter">HACKATHON</span>
+                </h1>
+                
+                <!-- The cursive text (In Front, centered and overlapping) -->
+                <h2 class="absolute top-0 md:top-4 w-full text-center text-[4.5rem] md:text-[6rem] lg:text-[7.5rem] font-script text-fem-ink leading-[0.5] z-10 transform -rotate-1 opacity-90 drop-shadow-md">
+                    The Inspiring Women
+                </h2>
+            </div>
+            
+            <div class="my-10 md:my-14 relative inline-block">
+                <!-- Ribbon design -->
+                <div class="relative z-10 bg-fem-green text-fem-bg px-10 md:px-16 py-4 shadow-xl banner-shadow">
+                    <span class="text-xl md:text-3xl font-bold tracking-widest uppercase font-serif">5-7 March 2026</span>
+                </div>
+                <!-- Ribbon tails -->
+                <div class="absolute top-1/2 -left-4 w-8 h-[115%] bg-fem-green -z-10 transform -translate-y-1/2 polygon-ribbon-left opacity-90 shadow-md"></div>
+                <div class="absolute top-1/2 -right-4 w-8 h-[115%] bg-fem-green -z-10 transform -translate-y-1/2 polygon-ribbon-right opacity-90 shadow-md"></div>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-12" data-aos="fade-up" data-aos-delay="400">
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 md:w-24 md:h-24 bg-fem-bg border border-fem-border rounded-lg flex items-center justify-center shadow-inner relative overflow-hidden group hover:border-fem-rose transition-colors duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-br from-fem-surface to-transparent opacity-50"></div>
+                        <span id="days" class="text-3xl md:text-5xl font-serif text-fem-ink/90 relative z-10 group-hover:scale-110 transition-transform duration-300">00</span>
+                    </div>
+                    <span class="mt-3 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-fem-ink/70 font-sans">Jours</span>
+                </div>
+                
+                <span class="text-4xl md:text-6xl text-fem-border self-start mt-2 md:mt-4">:</span>
+                
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 md:w-24 md:h-24 bg-fem-bg border border-fem-border rounded-lg flex items-center justify-center shadow-inner relative overflow-hidden group hover:border-fem-green transition-colors duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-br from-fem-surface to-transparent opacity-50"></div>
+                        <span id="hours" class="text-3xl md:text-5xl font-serif text-fem-ink/90 relative z-10 group-hover:scale-110 transition-transform duration-300">00</span>
+                    </div>
+                    <span class="mt-3 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-fem-ink/70 font-sans">Heures</span>
+                </div>
+
+                <span class="text-4xl md:text-6xl text-fem-border self-start mt-2 md:mt-4">:</span>
+                
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 md:w-24 md:h-24 bg-fem-bg border border-fem-border rounded-lg flex items-center justify-center shadow-inner relative overflow-hidden group hover:border-fem-ink transition-colors duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-br from-fem-surface to-transparent opacity-50"></div>
+                        <span id="minutes" class="text-3xl md:text-5xl font-serif text-fem-ink/90 relative z-10 group-hover:scale-110 transition-transform duration-300">00</span>
+                    </div>
+                    <span class="mt-3 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-fem-ink/70 font-sans">Minutes</span>
+                </div>
+
+                <span class="text-4xl md:text-6xl text-fem-border self-start mt-2 md:mt-4 hidden md:block">:</span>
+                
+                <div class="flex flex-col items-center hidden md:flex">
+                    <div class="w-16 h-16 md:w-24 md:h-24 bg-fem-bg border border-fem-border rounded-lg flex items-center justify-center shadow-inner relative overflow-hidden group hover:border-fem-accent transition-colors duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-br from-fem-surface to-transparent opacity-50"></div>
+                        <span id="seconds" class="text-3xl md:text-5xl font-serif text-fem-ink/90 relative z-10 group-hover:scale-110 transition-transform duration-300">00</span>
+                    </div>
+                    <span class="mt-3 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-fem-ink/70 font-sans">Secondes</span>
+                </div>
+            </div>
+
+            <p class="text-lg md:text-2xl text-fem-ink font-serif uppercase tracking-widest max-w-4xl mx-auto leading-relaxed border-y-2 border-fem-ink/20 py-6 my-8 px-4 font-semibold text-center mt-2 md:mt-8">
+                "Technologie pour l'autonomie, la santé et la sécurité des femmes"
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-6 items-center justify-center mt-12 md:mt-16">
+                <a href="#register" class="px-12 py-5 bg-fem-ink text-white rounded-full font-bold text-sm uppercase tracking-widest hover:bg-fem-green transition-all transform hover:-translate-y-1 shadow-xl">
+                    S'inscrire à l'édition
+                </a>
+                <a href="#target" class="px-12 py-5 bg-transparent border-2 border-fem-ink text-fem-ink rounded-full font-bold text-sm uppercase tracking-widest hover:bg-fem-ink hover:text-white transition-all">
+                    Pour Qui ?
+                </a>
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- Project & Organization Description -->
+    <section id="about" class="py-24 relative bg-fem-surface border-y border-fem-border">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="max-w-5xl mx-auto" data-aos="fade-up">
+                <div class="flex items-start gap-8 md:gap-16">
+                    <div class="hidden md:flex flex-col items-center">
+                        <div class="w-24 h-24 rounded-full border border-fem-ink/30 flex items-center justify-center relative bg-fem-bg shadow-inner">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-12 h-12 text-fem-green opacity-90 animate-[spin_30s_linear_infinite]">
+                                <!-- Geometric Outer Star/Gear -->
+                                <path d="M50 0 L58 35 L95 35 L65 55 L75 90 L50 70 L25 90 L35 55 L5 35 L42 35 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <!-- Elegant Inner Floral/Petal Curves -->
+                                <path d="M50 20 Q 65 50 50 80 Q 35 50 50 20 Z" fill="none" stroke="#A7333F" stroke-width="2" transform="rotate(0 50 50)"/>
+                                <path d="M50 20 Q 65 50 50 80 Q 35 50 50 20 Z" fill="none" stroke="#A7333F" stroke-width="2" transform="rotate(45 50 50)"/>
+                                <path d="M50 20 Q 65 50 50 80 Q 35 50 50 20 Z" fill="none" stroke="#A7333F" stroke-width="2" transform="rotate(90 50 50)"/>
+                                <path d="M50 20 Q 65 50 50 80 Q 35 50 50 20 Z" fill="none" stroke="#A7333F" stroke-width="2" transform="rotate(135 50 50)"/>
+                                <!-- Central Node / Dot -->
+                                <circle cx="50" cy="50" r="4" fill="#2A2A28" />
+                            </svg>
+                            <div class="absolute inset-2 border border-fem-ink/10 rounded-full rotate-45"></div>
+                            <div class="absolute -inset-1 border border-fem-rose/20 rounded-full rotate-12"></div>
+                        </div>
+                        <div class="w-px h-full bg-gradient-to-b from-fem-ink/20 to-transparent min-h-[150px]"></div>
+                    </div>
+                    <div>
+                        <span class="text-fem-rose font-bold uppercase tracking-[0.2em] text-xs">Contexte de l'événement</span>
+                        <h2 class="text-4xl md:text-5xl font-serif text-fem-ink mt-4 mb-6">L'Innovation au <span class="font-script text-fem-green text-6xl md:text-7xl lowercase relative top-2">féminin</span></h2>
+                        <div class="text-fem-ink/80 leading-relaxed font-sans space-y-4 mb-8">
+                            <p>À l’occasion de la Journée Internationale des Droits des Femmes, le Club UCA’Innov de la Cité de l’Innovation de l’Université Cadi Ayyad organise la première édition du FemTech Hackathon, un événement dédié à l’innovation technologique au service des femmes.</p>
+                            <p>Aujourd’hui, la technologie fait partie de presque tous les aspects de notre vie quotidienne. Pourtant, beaucoup d’outils et de solutions numériques ne prennent pas suffisamment en compte les besoins spécifiques des femmes.</p>
+                            <p>Le FemTech Hackathon est né de cette envie de donner la parole aux étudiantes et aux jeunes innovatrices pour imaginer une technologie plus inclusive.</p>
+                        </div>
+                        <div class="flex flex-col gap-2 pt-6 border-t border-fem-border/50">
+                            <span class="text-xl font-bold text-fem-ink tracking-wider font-serif">Club UCA'INNOV </span>
+                            <span class="text-sm font-sans text-fem-green uppercase tracking-widest font-bold">Université Cadi Ayyad - Cité de l'innovation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience (Pour Qui?) -->
+    <section id="target" class="py-24 relative bg-fem-bg">
+        <div class="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-16">
+            <div class="lg:w-1/2" data-aos="fade-right">
+                <span class="text-fem-accent font-bold uppercase tracking-[0.2em] text-xs">Critères d'admission</span>
+                <h2 class="text-4xl md:text-6xl font-serif text-fem-ink mt-6 mb-10">Pour <span class="font-script text-fem-rose text-6xl md:text-8xl lowercase relative top-2">qui ?</span></h2>
+                
+                <ul class="space-y-6 text-fem-ink font-sans uppercase tracking-[0.15em] text-sm md:text-sm font-bold leading-relaxed border-l-[3px] border-fem-green pl-8">
+                    <li class="relative hover:text-fem-green transition-colors">
+                        <span class="absolute -left-12 text-fem-green text-xl">•</span>
+                        Étudiantes et étudiants de l'enseignement supérieur
+                    </li>
+                    <li class="relative hover:text-fem-green transition-colors">
+                        <span class="absolute -left-12 text-fem-green text-xl">•</span>
+                        Jeunes porteuses de projets innovants (femmes)
+                    </li>
+                    <li class="relative hover:text-fem-green transition-colors">
+                        <span class="absolute -left-12 text-fem-green text-xl">•</span>
+                        Passionné(e)s & Professeurs chercheur(se)s
+                    </li>
+                    <li class="relative hover:text-fem-green transition-colors">
+                        <span class="absolute -left-12 text-fem-green text-xl">•</span>
+                        Équipes de 2 à 4 personnes (hommes autorisés)
+                    </li>
+                </ul>
+                <div class="mt-12 inline-block bg-fem-rose text-white px-6 py-3 shadow-lg rounded-full font-mono text-xs font-bold tracking-[0.3em]">
+                    #FEMTECHHACKATHON2026
+                </div>
+            </div>
+            
+            <div class="lg:w-1/2 relative flex justify-center" data-aos="fade-left">
+                <!-- Elaborate Steampunk Floral Emblem (Cyber-Rose) -->
+                <div class="relative w-full max-w-[450px] aspect-square flex items-center justify-center">
+                    <svg viewBox="0 0 800 800" class="w-full h-full drop-shadow-2xl">
+                        <defs>
+                            <radialGradient id="cyber-glow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#DBCFBA" stop-opacity="0.8"/>
+                                <stop offset="100%" stop-color="#2A2A28" stop-opacity="0"/>
+                            </radialGradient>
+                            <!-- Tech Nodes Pattern -->
+                            <pattern id="nodes" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse" patternTransform="rotate(15)">
+                                <path d="M10 10 L 30 10 L 40 20 L 40 40" stroke="#DBCFBA" stroke-width="1.5" fill="none" opacity="0.4"/>
+                                <circle cx="10" cy="10" r="2" fill="#D37340" opacity="0.7"/>
+                                <circle cx="40" cy="40" r="3" fill="#3F5647" opacity="0.7"/>
+                            </pattern>
+                        </defs>
+
+                        <!-- Outer Base -->
+                        <circle cx="400" cy="400" r="380" fill="url(#nodes)" stroke="#2A2A28" stroke-width="2" />
+                        <circle cx="400" cy="400" r="370" fill="none" stroke="#3F5647" stroke-width="6" stroke-dasharray="2 12" />
+
+                        <!-- Large Steampunk Gear 1 -->
+                        <g class="animate-[spin_60s_linear_infinite]" fill="none" stroke="#2A2A28">
+                            <!-- Gear Teeth via Thick Dashes -->
+                            <circle cx="400" cy="400" r="340" stroke-width="24" stroke-dasharray="24 24" />
+                            <circle cx="400" cy="400" r="325" stroke-width="10" />
+                            <circle cx="400" cy="400" r="310" stroke="#3F5647" stroke-width="2" />
+                        </g>
+
+                        <!-- Large Steampunk Gear 2 (Inner, Reverse) -->
+                        <g class="animate-[spin_45s_linear_infinite_reverse]" fill="none">
+                            <circle cx="400" cy="400" r="280" stroke="#D37340" stroke-width="16" stroke-dasharray="10 30" />
+                            <circle cx="400" cy="400" r="270" stroke="#2A2A28" stroke-width="4" />
+                        </g>
+
+                        <!-- Complex Astrolabe Rings -->
+                        <g class="animate-[spin_30s_linear_infinite]" stroke="#DBCFBA" stroke-width="1.5" fill="none">
+                            <ellipse cx="400" cy="400" rx="260" ry="70" transform="rotate(0 400 400)" />
+                            <ellipse cx="400" cy="400" rx="260" ry="70" transform="rotate(60 400 400)" />
+                            <ellipse cx="400" cy="400" rx="260" ry="70" transform="rotate(120 400 400)" />
+                        </g>
+
+                        <!-- Botanical Core (Cyber-Rose) -->
+                        <g transform="translate(400, 400)">
+                            <circle cx="0" cy="0" r="200" fill="url(#cyber-glow)" />
+                            
+                            <!-- Base Lotus Petals (Dark Rose) -->
+                            <g fill="#D1565C" stroke="#2A2A28" stroke-width="2">
+                                <path d="M0 -180 C 45 -135 35 -45 0 0 C -35 -45 -45 -135 0 -180 Z" transform="rotate(0)" />
+                                <path d="M0 -180 C 45 -135 35 -45 0 0 C -35 -45 -45 -135 0 -180 Z" transform="rotate(45)" />
+                                <path d="M0 -180 C 45 -135 35 -45 0 0 C -35 -45 -45 -135 0 -180 Z" transform="rotate(90)" />
+                                <path d="M0 -180 C 45 -135 35 -45 0 0 C -35 -45 -45 -135 0 -180 Z" transform="rotate(135)" />
+                                <path d="M0 -180 C 45 -135 35 -45 0 0 C -35 -45 -45 -135 0 -180 Z" transform="rotate(180)" />
+                                <path d="M0 -180 C 45 -135 35 -45 0 0 C -35 -45 -45 -135 0 -180 Z" transform="rotate(225)" />
+                                <path d="M0 -180 C 45 -135 35 -45 0 0 C -35 -45 -45 -135 0 -180 Z" transform="rotate(270)" />
+                                <path d="M0 -180 C 45 -135 35 -45 0 0 C -35 -45 -45 -135 0 -180 Z" transform="rotate(315)" />
+                            </g>
+
+                            <!-- Mid Lotus Petals (Soft Rose) - Counter Rotating -->
+                            <g fill="#E2C4C3" stroke="#2A2A28" stroke-width="2" class="animate-[spin_60s_linear_infinite_reverse]" style="transform-origin: center;">
+                                <path d="M0 -130 C 35 -100 25 -30 0 0 C -25 -30 -35 -100 0 -130 Z" transform="rotate(22.5)" />
+                                <path d="M0 -130 C 35 -100 25 -30 0 0 C -25 -30 -35 -100 0 -130 Z" transform="rotate(67.5)" />
+                                <path d="M0 -130 C 35 -100 25 -30 0 0 C -25 -30 -35 -100 0 -130 Z" transform="rotate(112.5)" />
+                                <path d="M0 -130 C 35 -100 25 -30 0 0 C -25 -30 -35 -100 0 -130 Z" transform="rotate(157.5)" />
+                                <path d="M0 -130 C 35 -100 25 -30 0 0 C -25 -30 -35 -100 0 -130 Z" transform="rotate(202.5)" />
+                                <path d="M0 -130 C 35 -100 25 -30 0 0 C -25 -30 -35 -100 0 -130 Z" transform="rotate(247.5)" />
+                                <path d="M0 -130 C 35 -100 25 -30 0 0 C -25 -30 -35 -100 0 -130 Z" transform="rotate(292.5)" />
+                                <path d="M0 -130 C 35 -100 25 -30 0 0 C -25 -30 -35 -100 0 -130 Z" transform="rotate(337.5)" />
+                            </g>
+
+                            <!-- Inner Sun/Gear (Gold) -->
+                            <g fill="#D37340" stroke="#2A2A28" stroke-width="1.5">
+                                <path d="M0 -80 C 20 -60 15 -20 0 0 C -15 -20 -20 -60 0 -80 Z" transform="rotate(0)" />
+                                <path d="M0 -80 C 20 -60 15 -20 0 0 C -15 -20 -20 -60 0 -80 Z" transform="rotate(45)" />
+                                <path d="M0 -80 C 20 -60 15 -20 0 0 C -15 -20 -20 -60 0 -80 Z" transform="rotate(90)" />
+                                <path d="M0 -80 C 20 -60 15 -20 0 0 C -15 -20 -20 -60 0 -80 Z" transform="rotate(135)" />
+                                <path d="M0 -80 C 20 -60 15 -20 0 0 C -15 -20 -20 -60 0 -80 Z" transform="rotate(180)" />
+                                <path d="M0 -80 C 20 -60 15 -20 0 0 C -15 -20 -20 -60 0 -80 Z" transform="rotate(225)" />
+                                <path d="M0 -80 C 20 -60 15 -20 0 0 C -15 -20 -20 -60 0 -80 Z" transform="rotate(270)" />
+                                <path d="M0 -80 C 20 -60 15 -20 0 0 C -15 -20 -20 -60 0 -80 Z" transform="rotate(315)" />
+                            </g>
+
+                            <!-- Cyber Eye Core -->
+                            <circle cx="0" cy="0" r="50" fill="#2A2A28" />
+                            <circle cx="0" cy="0" r="35" fill="none" stroke="#DBCFBA" stroke-width="6" stroke-dasharray="15 10" class="animate-[spin_10s_linear_infinite]" />
+                            <circle cx="0" cy="0" r="20" fill="#3F5647" />
+                            <circle cx="0" cy="0" r="6" fill="#FCF9F2" />
+                        </g>
+                    </svg>
+
+                    <!-- Overlay Text -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none drop-shadow-lg scale-110">
+                        <span class="font-script text-5xl md:text-6xl text-white transform -rotate-3 mb-2">Excellence</span>
+                        <span class="font-sans text-lg md:text-xl tracking-[0.3em] text-[#DBCFBA] uppercase font-bold">& Parité</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Themes Section -->
+    <section id="themes" class="py-24 relative bg-fem-surface border-y border-fem-border">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="text-center mb-20 relative">
+                <span class="text-fem-green font-bold uppercase tracking-[0.2em] text-xs">Domaines de travail</span>
+                <h2 class="text-5xl md:text-6xl font-serif text-fem-ink mt-4">Les <span class="font-script text-fem-accent text-6xl md:text-8xl lowercase relative top-2">thématiques</span></h2>
+                <div class="w-16 h-1 bg-fem-rose mx-auto mt-8"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Theme 1 -->
+                <div class="bg-fem-bg border border-fem-border p-10 hover:border-fem-rose hover:shadow-xl transition-all duration-500 group" data-aos="fade-up">
+                    <div class="text-5xl font-script text-fem-rose mb-6 group-hover:scale-110 origin-left transition-transform">Un</div>
+                    <h3 class="text-lg font-bold text-fem-ink mb-4 uppercase tracking-wider font-serif">Santé &<br>bien-être</h3>
+                    <ul class="text-fem-ink/70 leading-relaxed text-sm space-y-2 list-disc list-inside">
+                        <li>Santé reproductive et menstruelle</li>
+                        <li>Santé mentale et bien-être émotionnel</li>
+                        <li>Amélioration de la qualité de vie</li>
+                    </ul>
+                </div>
+
+                <!-- Theme 2 -->
+                <div class="bg-fem-bg border border-fem-border p-10 hover:border-fem-green hover:shadow-xl transition-all duration-500 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-5xl font-script text-fem-green mb-6 group-hover:scale-110 origin-left transition-transform">Deux</div>
+                    <h3 class="text-lg font-bold text-fem-ink mb-4 uppercase tracking-wider font-serif">Autonomie éco.<br>& juridique</h3>
+                    <ul class="text-fem-ink/70 leading-relaxed text-sm space-y-2 list-disc list-inside">
+                        <li>Inclusion et indépendance financière</li>
+                        <li>Accès à l’information juridique</li>
+                        <li>Compréhension des droits</li>
+                    </ul>
+                </div>
+
+                <!-- Theme 3 -->
+                <div class="bg-fem-bg border border-fem-border p-10 hover:border-fem-ink hover:shadow-xl transition-all duration-500 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-5xl font-script text-fem-ink mb-6 group-hover:scale-110 origin-left transition-transform">Trois</div>
+                    <h3 class="text-lg font-bold text-fem-ink mb-4 uppercase tracking-wider font-serif">Sécurité<br>& Protection</h3>
+                    <ul class="text-fem-ink/70 leading-relaxed text-sm space-y-2 list-disc list-inside">
+                        <li>Sécurité physique (espace public/privé)</li>
+                        <li>Protection digitale & cyberharcèlement</li>
+                        <li>Environnement respectueux</li>
+                    </ul>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Detailed Program -->
+    <section id="program" class="py-24 relative bg-fem-bg">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="text-center mb-24">
+                <span class="text-fem-rose font-bold uppercase tracking-[0.2em] text-xs">Agenda</span>
+                <h2 class="text-5xl md:text-6xl font-serif text-fem-ink mt-4">Déroulé du <span class="font-script text-fem-green text-6xl md:text-8xl lowercase relative top-2">programme</span></h2>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-[2px] before:bg-fem-border">
+                    
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-fem-bg bg-fem-ink shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-white font-bold text-xs ring-4 ring-fem-border">1</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-8 bg-fem-surface border border-fem-border rounded-none shadow-sm hover:border-fem-green transition-colors" data-aos="fade-up">
+                            <h3 class="font-bold text-xl text-fem-ink font-serif mb-1">Clôture des inscriptions</h3>
+                            <time class="text-fem-rose text-xs font-sans font-bold uppercase tracking-widest mb-4 block">1er Mars 2026</time>
+                            <p class="text-fem-ink/70 text-sm leading-relaxed">Dernier délai pour soumettre les formulaires d'inscription (lancement officiel de l'appel à candidature le 23 février).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-fem-bg bg-fem-accent shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-white font-bold text-xs ring-4 ring-fem-border">2</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-8 bg-fem-surface border border-fem-border rounded-none shadow-sm hover:border-fem-green transition-colors" data-aos="fade-up">
+                            <h3 class="font-bold text-xl text-fem-ink font-serif mb-1">Annonce des Sélections</h3>
+                            <time class="text-fem-rose text-xs font-sans font-bold uppercase tracking-widest mb-4 block">3 Mars 2026</time>
+                            <p class="text-fem-ink/70 text-sm leading-relaxed">Annonce officielle des projets et équipes retenus pour participer à l'événement.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-fem-bg bg-fem-green shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-white font-bold text-xs ring-4 ring-fem-border">3</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-8 bg-fem-ink border border-fem-ink rounded-none shadow-xl hover:bg-[#1a1a19] transition-colors" data-aos="fade-up">
+                            <h3 class="font-bold text-2xl text-fem-surface font-serif mb-1">Le Hackathon</h3>
+                            <time class="text-fem-green text-xs font-sans font-bold uppercase tracking-widest mb-4 block">5, 6 et 7 Mars 2026</time>
+                            <p class="text-fem-surface/80 text-sm leading-relaxed mb-4">Ouverture officielle le 5 mars à la Cité de l'Innovation Marrakech. Le programme inclut :</p>
+                            <ul class="text-fem-surface/70 text-xs space-y-2 list-disc list-inside">
+                                <li>Sessions de formation express</li>
+                                <li>Phases de création intensive avec coaching</li>
+                                <li>Présentation finale devant un jury d'experts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-20 p-10 border border-fem-border bg-fem-surface/50 shadow-sm max-w-2xl mx-auto" data-aos="fade-up">
+                    <h3 class="text-2xl font-serif text-fem-ink mb-2 text-center">Livrables Attendus</h3>
+                    <div class="w-12 h-1 bg-fem-rose mx-auto mb-6"></div>
+                    <p class="text-fem-ink/70 text-sm mb-8 text-center">Lors du Hackathon, chaque équipe aura pour mission de présenter devant le jury :</p>
+                    <div class="grid sm:grid-cols-2 gap-y-6 gap-x-8">
+                        <div class="flex items-center gap-4">
+                            <span class="w-10 h-10 rounded-full bg-fem-green/10 text-fem-green flex items-center justify-center shrink-0 font-bold">1</span>
+                            <span class="text-sm font-bold text-fem-ink">Problématique clairement définie</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="w-10 h-10 rounded-full bg-fem-green/10 text-fem-green flex items-center justify-center shrink-0 font-bold">2</span>
+                            <span class="text-sm font-bold text-fem-ink">Solution technologique argumentée</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="w-10 h-10 rounded-full bg-fem-green/10 text-fem-green flex items-center justify-center shrink-0 font-bold">3</span>
+                            <span class="text-sm font-bold text-fem-ink">Prototype ou maquette fonctionnelle</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="w-10 h-10 rounded-full bg-fem-green/10 text-fem-green flex items-center justify-center shrink-0 font-bold">4</span>
+                            <span class="text-sm font-bold text-fem-ink">Un pitch convaincant</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Form Section -->
+    <section id="register" class="py-24 relative bg-fem-surface border-t border-fem-border">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="max-w-6xl mx-auto border border-fem-border bg-fem-bg flex flex-col xl:flex-row shadow-2xl" data-aos="zoom-in">
+                
+                <div class="xl:w-[45%] bg-fem-green p-12 lg:p-16 flex flex-col justify-center relative overflow-hidden">
+                    <div class="absolute -right-20 -top-20 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+                    <div class="relative z-10">
+                        <span class="text-fem-bg font-bold uppercase tracking-[0.2em] text-xs">Portail de candidature</span>
+                        <h3 class="text-5xl font-serif text-white mt-4 mb-6 leading-tight">Rejoignez <br> <span class="font-script text-6xl text-fem-rose-soft font-normal">l'aventure</span></h3>
+                        <p class="text-white/80 font-serif leading-relaxed mb-8 text-base">
+                            Remplissez ce formulaire d'intention. Une confirmation vous sera communiquée ultérieurement par l'équipe UCA'INNOV.
+                        </p>
+                        <div class="mt-8">
+                            <div class="inline-block border border-white/20 p-4">
+                                <span class="block text-[10px] text-white/50 uppercase tracking-widest mb-1">Date Limite</span>
+                                <span class="font-serif text-xl tracking-widest text-fem-rose-soft">1 MARS 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="xl:w-[55%] p-12 lg:p-16 relative">
+                    <div class="flex flex-col items-center justify-center text-center h-full">
+                        <div class="w-20 h-20 border-2 border-fem-green rounded-full flex items-center justify-center mb-8 bg-fem-surface shadow-[0_0_15px_rgba(63,86,71,0.2)]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-fem-green">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                            </svg>
+                        </div>
+                        <h4 class="text-3xl font-serif text-fem-ink mb-6">Dépôt de Candidature</h4>
+                        <p class="text-fem-ink/80 text-base max-w-md mx-auto leading-relaxed mb-10 font-sans">
+                            La soumission des projets s'effectue directement via notre portail sécurisé. Cliquez sur le bouton ci-dessous pour accéder au dossier officiel d'inscription.
+                        </p>
+                        
+                        <a href="https://forms.gle/2zf3ue1R9D8rHcZk9" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center gap-4 bg-fem-ink text-white px-10 py-5 font-bold uppercase tracking-[0.2em] text-sm hover:bg-fem-green transition-colors duration-300 shadow-xl w-full sm:w-auto rounded-full">
+                            <span>Accéder au portail d'inscription</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 group-hover:translate-x-2 transition-transform">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizers Section -->
+    <section id="organizers" class="py-24 relative bg-fem-bg border-t border-fem-border">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16 relative">
+                <span class="text-fem-green font-bold uppercase tracking-[0.2em] text-xs">Nos partenaires de prestige</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-fem-ink mt-4">Les <span class="font-script text-fem-rose text-5xl md:text-6xl lowercase relative top-2">Organisateurs</span></h2>
+                <div class="w-16 h-1 bg-fem-rose mx-auto mt-6"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 max-w-5xl mx-auto">
+                <!-- UCA -->
+                <div class="flex flex-col items-center justify-center group" data-aos="fade-up">
+                    <div class="w-32 h-32 lg:w-40 lg:h-40 bg-white border-2 border-fem-border rounded-full flex items-center justify-center p-4 shadow-sm group-hover:border-fem-green group-hover:shadow-lg transition-all duration-300 mb-4 overflow-hidden relative">
+                        <img src="uca.webp" alt="Université Cadi Ayyad" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <span class="text-fem-ink font-bold uppercase tracking-[0.15em] text-[10px] md:text-xs text-center font-sans">Université<br>Cadi Ayyad</span>
+                </div>
+
+                <!-- Cité Innovation -->
+                <div class="flex flex-col items-center justify-center group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-32 h-32 lg:w-40 lg:h-40 bg-white border-2 border-fem-border rounded-full flex items-center justify-center p-1 shadow-sm group-hover:border-fem-rose group-hover:shadow-lg transition-all duration-300 mb-4 overflow-hidden relative">
+                        <img src="logo cim.png" alt="Cité de l'innovation" class="w-[95%] h-[95%] object-contain scale-110 group-hover:scale-125 transition-transform duration-500">
+                    </div>
+                    <span class="text-fem-ink font-bold uppercase tracking-[0.15em] text-[10px] md:text-xs text-center font-sans">Cité de<br>l'innovation</span>
+                </div>
+
+                <!-- UCA Innov -->
+                <div class="flex flex-col items-center justify-center group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-32 h-32 lg:w-40 lg:h-40 bg-white border-2 border-fem-border rounded-full flex items-center justify-center p-2 shadow-sm group-hover:border-fem-ink group-hover:shadow-lg transition-all duration-300 mb-4 overflow-hidden relative">
+                        <img src="uca_innov.PNG" alt="Club UCA'INNOV" class="w-full h-full object-contain scale-[1.1] group-hover:scale-[1.2] transition-transform duration-500">
+                    </div>
+                    <span class="text-fem-ink font-bold uppercase tracking-[0.15em] text-[10px] md:text-xs text-center font-sans">Club<br>UCA'INNOV</span>
+                </div>
+
+                <!-- Enactus -->
+                <div class="flex flex-col items-center justify-center group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-32 h-32 lg:w-40 lg:h-40 bg-white border-2 border-fem-border rounded-full flex items-center justify-center p-4 shadow-sm group-hover:border-fem-accent group-hover:shadow-lg transition-all duration-300 mb-4 overflow-hidden relative">
+                        <img src="enactus.png" alt="Club ENACTUS FSJES" class="max-w-[80%] max-h-[80%] object-contain group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <span class="text-fem-ink font-bold uppercase tracking-[0.15em] text-[10px] md:text-xs text-center font-sans">Club<br>ENACTUS FSJES</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative bg-fem-surface border-t border-fem-border">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16 relative">
+                <span class="text-fem-rose font-bold uppercase tracking-[0.2em] text-xs">Restons connectés</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-fem-ink mt-4">Nous <span class="font-script text-fem-green text-5xl md:text-6xl lowercase relative top-2">Contacter</span></h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Location & Map -->
+                <div class="bg-fem-bg border border-fem-border flex flex-col shadow-sm hover:shadow-lg transition-shadow overflow-hidden group" data-aos="fade-up">
+                    <div class="h-48 w-full bg-fem-surface relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1698.3975001740924!2d-8.0306159!3d31.6373197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafec0955555555%3A0x7163612040e32812!2sLa%20cit%C3%A9%20d&#39;innovation!5e0!3m2!1sfr!2sma!4v1700000000000!5m2!1sfr!2sma" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; filter: grayscale(100%) contrast(1.2) opacity(0.8);" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="absolute inset-0 group-hover:filter-none transition-all duration-500">
+                        </iframe>
+                    </div>
+                    <div class="p-8 flex flex-col items-center text-center">
+                        <div class="w-12 h-12 rounded-full bg-fem-rose text-white flex items-center justify-center mb-4 shadow-md -mt-14 relative z-10 border-4 border-fem-bg">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-fem-ink mb-2 uppercase tracking-wider">Localisation</h3>
+                        <p class="text-fem-ink/80 font-sans text-sm leading-relaxed font-bold">
+                            Cité de l'Innovation, UCA<br>
+                            Marrakech, Maroc
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="bg-fem-bg p-10 border border-fem-border flex flex-col items-center justify-center text-center shadow-sm hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-full bg-fem-green text-white flex items-center justify-center mb-6 shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-fem-ink mb-3 uppercase tracking-wider">Email</h3>
+                    <div class="flex flex-col gap-3 mt-2">
+                        <a href="mailto:uca.innov@uca.ac.ma" class="text-fem-ink/80 font-sans text-sm hover:text-fem-rose transition-colors font-bold uppercase tracking-widest">uca.innov@uca.ac.ma</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 border-t border-fem-border bg-fem-bg text-center lg:text-left">
+        <div class="container mx-auto px-6 lg:px-12 grid lg:grid-cols-4 gap-12 lg:gap-8">
+            <div class="lg:col-span-2">
+                <span class="text-4xl font-serif font-bold tracking-widest text-fem-ink uppercase mb-2 block">FemTech</span>
+                <span class="text-fem-green font-script text-3xl block mb-6">Hackathon 2026</span>
+                <p class="text-fem-ink text-xs font-sans uppercase font-bold tracking-widest leading-relaxed max-w-sm mx-auto lg:mx-0 mb-6">
+                    Organisé par le Club UCA'INNOV <br>
+                    Cité de l'Innovation, Université Cadi Ayyad.
+                </p>
+                <div class="space-y-3 flex flex-col items-center lg:items-start">
+                    <a href="mailto:uca.innov@uca.ac.ma" class="group flex items-center gap-3 text-sm font-bold text-fem-ink hover:text-fem-rose transition-colors">
+                        <span class="w-8 h-8 rounded-full bg-fem-green/10 text-fem-green flex items-center justify-center group-hover:bg-fem-rose group-hover:text-white transition-colors">✉</span> 
+                        uca.innov@uca.ac.ma
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-fem-ink font-bold uppercase tracking-[0.2em] text-xs mb-6 border-b-2 border-fem-rose pb-2 inline-block">Plan du site</h4>
+                <ul class="space-y-4 text-xs font-sans uppercase tracking-widest font-bold text-fem-ink/70">
+                    <li><a href="#about" class="hover:text-fem-rose transition-colors">Le concept</a></li>
+                    <li><a href="#target" class="hover:text-fem-rose transition-colors">Pour qui ?</a></li>
+                    <li><a href="#themes" class="hover:text-fem-rose transition-colors">Thématiques</a></li>
+                    <li><a href="#program" class="hover:text-fem-rose transition-colors">Programme</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-fem-ink font-bold uppercase tracking-[0.2em] text-xs mb-6 border-b-2 border-fem-rose pb-2 inline-block">Partenaires</h4>
+                <ul class="space-y-3 text-xs font-sans uppercase font-bold text-fem-ink/70">
+                    <li>Université Cadi Ayyad</li>
+                    <li>Cité de l'innovation</li>
+                    <li>Club UCA'INNOV</li>
+                    <li>Club Enactus FSJES</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 lg:px-12 mt-16 pt-8 border-t border-fem-border text-center flex flex-col items-center">
+            <p class="text-[9px] uppercase tracking-[0.4em] text-fem-ink/50 font-bold">© 2026 Club UCA'INNOV. Tous droits d'auteur réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor hidden lg:block" id="cursor"></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

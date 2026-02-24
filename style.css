@@ -1,0 +1,108 @@
+@layer base {
+  :root {
+    --fem-bg: #F4EAD3;
+    --fem-ink: #2A2A28;
+    --fem-green: #3F5647;
+    --fem-rose: #D1565C;
+    --fem-rose-soft: #E2C4C3;
+    --fem-surface: #FCF9F2;
+    --fem-border: #DBCFBA;
+    --fem-accent: #D37340;
+    --font-script: 'Great Vibes', cursive;
+  }
+
+  html, body {
+    background-color: var(--fem-bg);
+    color: var(--fem-ink);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--fem-bg); }
+  ::-webkit-scrollbar-thumb { background: var(--fem-green); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--fem-ink); }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-sm font-sans font-bold tracking-[0.2em] text-fem-ink hover:text-fem-green transition-colors uppercase relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-2 left-0 w-0 h-[2px] bg-fem-green transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}
+
+.ac-grid {
+    background-image: 
+        linear-gradient(to right, rgba(42, 42, 40, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(42, 42, 40, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.floral-pattern {
+    background-image: radial-gradient(var(--fem-rose-soft) 2px, transparent 2px);
+    background-size: 30px 30px;
+}
+
+/* Ribbon Shapes */
+.polygon-ribbon-left {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 20px 50%);
+}
+.polygon-ribbon-right {
+    clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 50%, 100% 100%, 0 100%);
+}
+
+.banner-shadow {
+    box-shadow: 0 15px 30px -10px rgba(63, 86, 71, 0.4);
+}
+
+.custom-cursor {
+  width: 14px;
+  height: 14px;
+  background: var(--fem-rose);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 9999;
+  transition: transform 0.15s ease-out;
+  box-shadow: 0 0 10px rgba(209, 86, 92, 0.5);
+}
+
+.nav-glass {
+    background: rgba(244, 234, 211, 0.9) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom-color: var(--fem-border) !important;
+    box-shadow: 0 4px 30px rgba(42, 42, 40, 0.05) !important;
+}
+
+/* Form inputs styling for light mode */
+input, select, textarea {
+  color: var(--fem-ink) !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #FCF9F2 inset !important;
+    -webkit-text-fill-color: #2A2A28 !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%233F5647' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+}
